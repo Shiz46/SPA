@@ -1,4 +1,4 @@
-$(function() {
+$ (document).ready(function() {
       
 
 
@@ -18,6 +18,9 @@ $(function() {
 
       return liElement;
     }
+    $(".toggle").on("click", function(){
+        console.log ("Got cliked")
+    });
 
     // toggleTask takes in an HTML representation of the
     // an event that fires from an HTML representation of
@@ -39,7 +42,7 @@ $(function() {
         var liHtml = taskHtml(data);
         var $li = $("#listenItem-" + data.id);
         $li.replaceWith(liHtml);
-        $('.toggle').change(toggleTask);
+        $('.toggle').change(toggleTask)
 
     });
 
